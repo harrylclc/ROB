@@ -66,10 +66,12 @@ def generate_new_mapping():
                         v = k
                         break
                 if v == '':
-                    if 'blinding' in d and '(detection bias)' in d:
-                        v = 'blinding of outcome assessment'
-                    else:
-                        if d.startswith('blinding'):
+                    if d.startswith('blinding'):
+                        if '(detection bias)' in d:
+                            v = 'blinding of outcome assessment'
+                        elif 'outcome assessor' in d:
+                            v = 'blinding of outcome assessment'
+                        else:
                             v = 'blinding of participants and personnel'
             if v != '':
                 new_mapping[d] = v

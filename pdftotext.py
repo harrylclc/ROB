@@ -15,6 +15,6 @@ if __name__ == '__main__':
             print '=' * 80, k
         path = id2path[id]
         try:
-            os.system('pdftotext -enc UTF-8 {}'.format(path))
+            os.system('pdftotext -nopgbrk -enc UTF-8 {}'.format(path))
         except:
             print path

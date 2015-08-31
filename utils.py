@@ -1,4 +1,4 @@
-data_folder = '/home/lc/cochrane/'
+data_folder = '/home/cul226/data/cochrane/'
 pickle_folder = data_folder + 'pickles/'
 
 d2idx = {'allocation concealment': 0,
